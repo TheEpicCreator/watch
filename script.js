@@ -51,7 +51,7 @@ searchBtn.addEventListener("click", async function () {
     recentBtn.style.display = "none";
     resultContainer.innerHTML = "";
 
-    updateUrl(`/`);
+    //updateUrl(`/`);
 
     const query = queryInput.value;
     const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/${query}?page=1`);
@@ -70,7 +70,7 @@ async function getSearchByEnter(event) {
         recentBtn.style.display = "none";
         resultContainer.innerHTML = "";
 
-        updateUrl(`/`);
+        //updateUrl(`/`);
 
         const query = queryInput.value;
         const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/${query}?page=1`);
@@ -164,7 +164,7 @@ function displayResults(results) {
             mainLoading.style.display = "flex";
             resultContainer.style.display = `none`;
 
-            updateUrl(`/?anime=${result.id}`);
+            //updateUrl(`/?anime=${result.id}`);
             dataURL = `${result.id}`
 
             const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/info/${result.id}`);
@@ -277,7 +277,7 @@ function displayWatchInfo(episodeData) {
             if (appParam == 'true') {
                 updateUrl(`?playInApp=${selectedServer}`);
             } else {
-                videoPlayer.src = `/player/?url=${selectedServer}`;
+                videoPlayer.src = `/player/?watch=${selectedServer}`;
             }
         });
     };
