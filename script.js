@@ -84,7 +84,7 @@ homeBtn.addEventListener("click", function () {
     if (appParam == 'true') {
         window.location.href = "/?app=true";
     } else {
-        window.location.href = "/";
+        //window.location.href = "/";
     }
 });
 
