@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<Module>
+<ModulePrefs title="watch"/>
+<Content type="html">
+<![CDATA[<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title id="title">astream - watch anime</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./-media/fav2.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/style.css">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/-media/fav2.svg" sizes="any" type="image/svg+xml">
 </head>
 
 <body>
@@ -114,7 +117,7 @@
         </div>
 
         <div id="mainLoading" style="display: none;">
-            <img src="./-media/loading-animation.gif" width="30px" />
+            <img src="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/-media/loading-animation.gif" width="30px" />
         </div>
 
         <div id="footerContainer" style="display: block;">
@@ -134,7 +137,9 @@
             </footer>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/script.js"></script>
 </body>
 
-</html>
+</html> ]]>
+</Content>
+</Module>
