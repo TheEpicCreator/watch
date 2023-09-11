@@ -3,9 +3,9 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/plyr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="icon" href="../-media/fav2.svg" sizes="any" type="image/svg+xml">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/-media/fav2.svg" sizes="any" type="image/svg+xml">
   <title>video player by willydev</title>
 
   <style>
@@ -75,7 +75,7 @@
 <body>
 
   <div class="container">
-    <video id="videoplayer" controls autoplay crossorigin playsinline poster="defaultposter.jpg">
+    <video id="videoplayer" controls autoplay crossorigin playsinline poster="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/defaultposter.jpg">
     </video>
   </div>
 
@@ -89,9 +89,9 @@
     source.type = 'application/x-mpegURL';
     video.appendChild(source);
   </script>
-  <script src="hls.min.js"></script>
-  <script src="plyr.min.js"></script>
-  <script src="plyr-hls.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/hls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/plyr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/plyr-hls.js"></script>
 
   <script>
     const player = new Plyr('#videoplayer', {
