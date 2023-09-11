@@ -136,7 +136,7 @@ function displayRecent(results) {
             mainLoading.style.display = "flex";
             resultContainer.style.display = `none`;
 
-            updateUrl(`/?anime=${result.id}`);
+            //updateUrl(`/?anime=${result.id}`);
             dataURL = `${result.id}`
 
             const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/info/${result.id}`);
