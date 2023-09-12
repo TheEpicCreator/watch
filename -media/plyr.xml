@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ModulePrefs title="watch"/>
+
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
 	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<ModulePrefs title="watch"/>
 	<symbol id="plyr-airplay" viewBox="0 0 18 18">
 		<path d="M16 1H2a1 1 0 00-1 1v10a1 1 0 001 1h3v-2H3V3h12v8h-2v2h3a1 1 0 001-1V2a1 1 0 00-1-1z" />
 		<path d="M4 17h10l-5-6z" />
