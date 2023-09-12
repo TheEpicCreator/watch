@@ -26,8 +26,16 @@ var randomLink = youtubeLinks[Math.floor(Math.random() * youtubeLinks.length)];
 videoPlayer.src = randomLink;
 
 // Check URL parameters
-function updateUrl(newUrl) {
-    window.history.pushState({}, '', newUrl);
+function updateUrl(query, val) {
+    let newURL = new URL(document.location);
+    if query == "/" {
+        newURL.searchParams.remove("anime")
+        newURL.searchParams.remove("playInApp")
+    } else {
+        newURL.searchParams.set(query)
+    }
+    
+    window.history.pushState({}, '', newURL.href);
 }
 
 // Check if the site is visited using android app
@@ -51,7 +59,7 @@ searchBtn.addEventListener("click", async function () {
     recentBtn.style.display = "none";
     resultContainer.innerHTML = "";
 
-    //updateUrl(`/`);
+    updateUrl(`/`);
 
     const query = queryInput.value;
     const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/${query}?page=1`);
@@ -70,7 +78,7 @@ async function getSearchByEnter(event) {
         recentBtn.style.display = "none";
         resultContainer.innerHTML = "";
 
-        //updateUrl(`/`);
+        updateUrl(`/`);
 
         const query = queryInput.value;
         const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/${query}?page=1`);
@@ -81,11 +89,8 @@ async function getSearchByEnter(event) {
 
 // Detect if homeBtn is clicked
 homeBtn.addEventListener("click", function () {
-    if (appParam == 'true') {
-        window.location.href = "/?app=true";
-    } else {
-        //window.location.href = "/";
-    }
+    updateUrl(`/`);
+    document.location = document.location
 });
 
 
@@ -128,7 +133,7 @@ function displayRecent(results) {
             mainLoading.style.display = "flex";
             resultContainer.style.display = `none`;
 
-            //updateUrl(`/?anime=${result.id}`);
+            updateUrl(`anime`, result.id);
             dataURL = `${result.id}`
 
             const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/info/${result.id}`);
@@ -164,7 +169,7 @@ function displayResults(results) {
             mainLoading.style.display = "flex";
             resultContainer.style.display = `none`;
 
-            //updateUrl(`/?anime=${result.id}`);
+            updateUrl(`anime`, result.id);
             dataURL = `${result.id}`
 
             const res = await fetch(`https://${apiEndpoint}/anime/gogoanime/info/${result.id}`);
@@ -274,11 +279,7 @@ function displayWatchInfo(episodeData) {
             // selectedServer = selectedServer.replace('http://', '');
             let selectedServer = serverUrl;
 
-            if (appParam == 'true') {
-                updateUrl(`?playInApp=${selectedServer}`);
-            } else {
-                videoPlayer.src = `https://kbowpkr82jrow-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/index.xml&watch=${selectedServer}`;
-            }
+            videoPlayer.src = `https://kbowpkr82jrow-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/index.xml&watch=${selectedServer}`;
         });
     };
 }
