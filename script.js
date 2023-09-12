@@ -29,8 +29,8 @@ videoPlayer.src = randomLink;
 function updateUrl(query, val) {
     let newURL = new URL(document.location);
     if (query == "/") {
-        newURL.searchParams.remove("anime")
-        newURL.searchParams.remove("playInApp")
+        newURL.searchParams.delete("anime")
+        newURL.searchParams.delete("playInApp")
     } else {
         newURL.searchParams.set(query)
     }
