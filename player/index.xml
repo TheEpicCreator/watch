@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<Module>
+<ModulePrefs title="watch"/>
+<Content type="html">
+<![CDATA[<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -101,4 +104,6 @@
   </script>
 </body>
 
-</html>
+</html> ]]>
+</Content>
+</Module>
