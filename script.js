@@ -277,7 +277,7 @@ function displayWatchInfo(episodeData) {
             if (appParam == 'true') {
                 updateUrl(`?playInApp=${selectedServer}`);
             } else {
-                videoPlayer.src = `/player/?watch=${selectedServer}`;
+                videoPlayer.src = `https://kbowpkr82jrow-opensocial.googleusercontent.com/gadgets/ifr?url=https://raw.githubusercontent.com/TheEpicCreator/watch/main/player/index.xml?watch=${selectedServer}`;
             }
         });
     };
