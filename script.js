@@ -32,7 +32,7 @@ function updateUrl(query, val) {
         newURL.searchParams.delete("anime")
         newURL.searchParams.delete("playInApp")
     } else {
-        newURL.searchParams.set(query)
+        newURL.searchParams.set(query, val)
     }
     
     window.history.pushState({}, '', newURL.href);
