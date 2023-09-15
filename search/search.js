@@ -3,7 +3,7 @@ const animeList = document.getElementById("resultContainer");
 const animecount = document.getElementById("animecount");
 
 const searchanime = async (searchBox) => {
-  const res = await fetch("https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/search/data/anime.json");
+  const res = await fetch("https://cdn.jsdelivr.net/gh/TheEpicCreator/watch@latest/search/data/anime.json");
   const animedata = await res.json();
 
   let fits = animedata.filter((anime) => {
@@ -36,7 +36,7 @@ const outputHtml = (fits) => {
 
 searchInput.addEventListener("input", () => searchanime(search.value));
 
-fetch('https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/search/data/anime.json')
+fetch('https://cdn.jsdelivr.net/gh/TheEpicCreator/watch@latest/search/data/anime.json')
   .then(response => response.json())
   .then(data => {
     const count = Object.keys(data).length;
