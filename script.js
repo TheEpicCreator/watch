@@ -279,7 +279,7 @@ function displayWatchInfo(episodeData) {
             // selectedServer = selectedServer.replace('http://', '');
             let selectedServer = serverUrl;
 
-            videoPlayer.src = `https://kbowpkr82jrow-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/TheEpicCreator/watch/player/index.xml&watch=${selectedServer}`;
+            videoPlayer.src = `https://kbowpkr82jrow-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/TheEpicCreator/watch@latest/player/index.xml&watch=${selectedServer}`;
         });
     };
 }
